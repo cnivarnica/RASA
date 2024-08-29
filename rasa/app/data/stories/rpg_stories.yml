@@ -1,0 +1,126 @@
+version: "3.1"
+
+stories:
+
+- story: Start game
+  steps:
+  - intent: start_rpg_game
+  - action: action_start_game
+
+- story: Restart game
+  steps:
+  - intent: restart_game
+  - action: action_start_game
+
+- story: Move
+  steps:
+  - intent: move
+  - action: action_move
+
+- story: Look around
+  steps:
+  - intent: look
+  - action: action_look
+
+- story: Get item
+  steps:
+  - intent: get_item
+  - action: action_get_item
+
+- story: Use item
+  steps:
+  - intent: use_item
+  - action: action_use_item
+
+- story: Check stats
+  steps:
+  - intent: status
+  - action: action_status
+
+- story: Check inventory
+  steps:
+  - intent: inventory
+  - action: action_inventory
+
+- story: Attack
+  steps:
+  - intent: attack
+  - action: action_attack
+
+- story: Flee from combat
+  steps:
+  - slot_was_set:
+    - game_state: "in_combat"
+  - intent: run_away
+  - action: action_run_away
+
+- story: Shop
+  steps:
+  - intent: shop
+  - action: action_shop
+
+- story: Buy
+  steps:
+  - intent: buy_item
+  - action: action_buy_item
+
+- story: Trade
+  steps:
+  - intent: trade
+  - action: action_trade
+  
+- story: Sell
+  steps:
+  - intent: sell_item
+  - action: action_sell_item
+
+- story: Talk to NPC
+  steps:
+  - intent: talk_to_npc
+  - action: action_talk_to_npc
+
+- story: Check quest
+  steps:
+  - intent: quest_info
+  - action: action_quest_info
+
+- story: Complete quest
+  steps:
+  - intent: complete_quest
+  - action: action_complete_quest
+  - action: action_check_level_up
+
+- story: Rest
+  steps:
+  - intent: rest
+  - action: action_rest
+
+- story: Explore
+  steps:
+  - intent: explore
+  - action: action_explore
+
+- story: Cast spell
+  steps:
+  - intent: cast_spell
+  - action: action_cast_spell
+
+- story: Pass time
+  steps:
+  - intent: pass_time
+  - action: action_pass_time
+
+- story: Craft
+  steps:
+  - intent: craft
+  - action: action_craft
+
+- story: Fish
+  steps:
+  - intent: fish
+  - action: action_fish
+
+- story: Mine
+  steps:
+  - intent: mine
+  - action: action_mine

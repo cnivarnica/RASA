@@ -1,0 +1,80 @@
+version: "3.1"
+
+# =======================
+# Actions
+# =======================
+actions:
+  - action_move
+  - action_look
+  - action_get_item
+  - action_use_item
+  - action_inventory
+  - action_status
+  - action_rest
+  - action_shop
+  - action_buy_item
+  - action_attack
+  - action_run_away
+  - action_level_up
+  - action_increase_stat
+  - action_check_game_over
+  - action_quest_info
+  - action_talk_to_npc
+  - action_complete_quest
+  - action_cast_spell
+  - action_explore
+  - action_pass_time
+  - action_start_game
+  - action_check_level_up
+  - action_help
+  - action_fish
+  - action_mine
+  - action_craft
+  - action_sell_item
+  - action_trade
+
+# =======================
+# Intents
+# =======================
+intents:
+  - move
+  - look
+  - get_item
+  - use_item
+  - inventory
+  - status
+  - shop
+  - buy_item
+  - attack
+  - run_away
+  - increase_stat
+  - help
+  - quest_info
+  - talk_to_npc
+  - complete_quest
+  - cast_spell
+  - explore
+  - pass_time
+  - start_rpg_game
+  - restart_game
+  - nlu_fallback
+  - trade
+  - sell_item
+  - craft
+  - rest
+  - fish
+  - mine
+
+# =======================
+# Responses
+# =======================
+responses:
+  utter_game_over:
+  - text: ""
+
+# =======================
+# Session Configuration
+# =======================
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

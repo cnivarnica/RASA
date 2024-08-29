@@ -1,0 +1,34 @@
+version: "3.1"
+nlu:
+  - intent: start_new_chess_game
+    examples: |
+      - Let's play chess
+      - Can we start a new chess game?
+      - I want to play chess
+      - Start a chess game
+      - New chess game
+      - Chess
+      - Play chess
+
+  - intent: make_chess_move
+    examples: |
+      - move [b2e4](chess_move)
+      - I move [d3d8](chess_move)
+      - My move is [c4c7](chess_move)
+      - [e6b5](chess_move) is my move
+      - move [e2e4](chess_move)
+      - make move [a2a4](chess_move)
+      - I will move [c2c6](chess_move)
+      - Let's go with [d2d4](chess_move)
+      - [f2f4](chess_move) will be my move
+      - [e2h4](chess_move)
+      - [h7e5](chess_move)
+      - [g1f3](chess_move)
+      - [b8c6](chess_move)
+      - [f1b5](chess_move)
+      - [g5f2](chess_move)
+      - [e1g1](chess_move)
+
+  - regex: chess_move
+    examples: |
+      - ^[a-h][1-8][a-h][1-8]$

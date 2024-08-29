@@ -1,0 +1,50 @@
+version: "3.1"
+
+stories:
+  - story: Start new chess game
+    steps:
+      - intent: start_new_chess_game
+      - action: action_new_chess_game
+      - action: action_ask_for_move
+      - checkpoint: ask_for_move
+
+  - story: Make chess move
+    steps:
+      - checkpoint: ask_for_move
+      - intent: make_chess_move
+        entities:
+          - chess_move
+      - action: action_chess_move
+      - action: action_ai_move
+      - action: action_check_game_over
+      - checkpoint: game_check
+
+  - story: Game continues
+    steps:
+      - checkpoint: game_check
+      - slot_was_set:
+          - game_over: false
+      - action: action_ask_for_move
+      - checkpoint: ask_for_move
+
+  - story: Game ends
+    steps:
+      - checkpoint: game_check
+      - slot_was_set:
+          - game_over: true
+      - action: action_end_game
+      - checkpoint: game_over
+
+  - story: Start new game after end
+    steps:
+      - checkpoint: game_over
+      - intent: affirm
+      - action: action_new_chess_game
+      - action: action_ask_for_move
+      - checkpoint: ask_for_move
+
+  - story: Decline new game after end
+    steps:
+      - checkpoint: game_over
+      - intent: deny
+      - action: utter_goodbye

@@ -1,0 +1,159 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yep
+    - sure
+    - Yes
+    - Yeah
+    - Sure
+    - Absolutely
+    - Of course
+    - Definitely
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no thanks
+    - no thank you
+    - nope
+    - No
+    - No way
+    - Not at all
+    - Nope
+
+- intent: use_challenge
+  examples: |
+    - how can you assist me?
+    - what kind of help do you offer?
+    - what services can you provide?
+    - how can you help me?
+    - what support do you give?
+    - what areas can you help me with?
+    - what can you do for me?
+    - in what ways can you assist me?
+    - how can you be of assistance?
+    - what can you help me with?
+    - what kind of stuff can you assist with?
+    - how can you give me a hand?
+    - what do people use you for?
+    - what are you good for?
+    - what can you be used for?
+    - what’s your purpose?
+    - what's your main function?
+    - what tasks can you handle?
+    - what’s your main job?
+    - What can you do?
+
+- intent: sorry
+  examples: |
+    - I'm sorry
+    - I'm afraid
+    - My apologies
+    - My bad
+    - I apologize
+    - I'm so sorry
+    - I'm really sorry
+    - I'm very sorry
+    - I'm so sorry
+    - I'm really sorry
+    - I'm very sorry
+    - I apologize for
+    - I'm sorry for
+    - I'm really sorry for
+    - I'm very sorry for
+    - I apologize for
+    - I'm sorry for
+    - I'm really sorry for
+    - I'm very sorry for
+
+- intent: thank_you
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thanks a ton
+    - thanks a bunch
+    - thanks so much
+    - thank you so much
+    - thank you so much for
+    - thanks for
+    - thanks for helping me
+    - thanks for your help
+    - thanks for your assistance
+    - thanks for your support
+    - thanks for your interest
+    - thanks for your time
+    - thanks for your consideration
+    - thanks for your cooperation
+    - thanks for your patience
+    - thanks for your understanding
+
+# # - intent: users_workplace
+# #   examples: |
+# #     - I currently work at [Google](workplace)
+# #     - My workplace is [Amazon](workplace)
+# #     - At [Apple](workplace) is where I work
+# #     - [KBC](workplace) is my place of work
+# #     - I'm employed at [Tesla](workplace)
+# #     - My job is at [Microsoft](workplace)
+# #     - I'm stationed at [KBC Global Services](workplace)
+# #     - You'll find me at [Nvidia](workplace)
+# #     - [Amazon](workplace) is where I'm based
+# #     - I'm situated at [Samsung](workplace)
+
+# # - lookup: workplace
+# #   examples: |
+# #     - Google
+# #     - Amazon
+# #     - Microsoft
+# #     - KBC
+# #     - Tesla
+# #     - Apple
+# #     - Samsung
+# #     - KBC Global Services
+# #     - VISA
+# #     - Mastercard
+# #     - Nvidia

@@ -1,0 +1,11 @@
+version: "3.1"
+
+rules:
+- rule: Level up
+  condition:
+    - slot_was_set:
+      - game_over: true
+  steps:
+  - action: action_level_up
+  - intent: increase_stat
+  - action: action_increase_stat

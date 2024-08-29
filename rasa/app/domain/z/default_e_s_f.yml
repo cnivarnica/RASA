@@ -1,0 +1,23 @@
+version: "3.1"
+
+# =======================
+# Entities
+# =======================
+entities:
+  - name
+# =======================
+# Slots
+# =======================
+slots:
+  name:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: name
+
+# =======================
+# Forms
+# =======================
+# forms:
+

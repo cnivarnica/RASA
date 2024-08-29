@@ -1,0 +1,23 @@
+version: "3.1"
+
+stories:
+
+- story: Introduction
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Uses ask
+  steps:
+  - intent: use_challenge
+  - action: utter_uses
+
+- story: Uses apologies
+  steps:
+  - intent: sorry
+  - action: utter_no_problem
+
+- story: Uses thanks
+  steps:
+  - intent: thank_you
+  - action: utter_you_are_welcome
